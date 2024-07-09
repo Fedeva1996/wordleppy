@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wordle PPY</title>
-        <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <h1>Wordle PPY</h1>
-    <input type="text" id="guess-input">
+
+<head>
+  <title>Wordle PPY</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Wordle PPY</h1>
+  <input type="text" id="guess-input" placeholder="Eligiendo palabra..." />
+  <div class="buttons">
     <button id="guess-button">Intentar</button>
-    <div id="grid"></div>
-    <p id="guesses">
-  </body>
+    <button id="restart-button">Reintentar</button>
+  </div>
+  <div id="grid"></div>
+  <p id="guesses"></p>
+</body>
+
 </html>

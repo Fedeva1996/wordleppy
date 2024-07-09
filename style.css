@@ -1,49 +1,104 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 18px;
+  width: 250px;
+  border: 1px solid #ccc;
+}
+
+input:disabled {
+  background-color: #ccc;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #0cbaba;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0cbaba;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.letter {
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.2rem;
+  margin: 3px;
+  text-align: center;
+  display: inline-block;
+  animation: aparecer 0.2s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(70ms * var(--i));
+}
+
+.correct {
+  background-color: green;
+}
+
+.exist {
+  background-color: yellow;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scaleY(0);
   }
-     
-  h1 {
-    text-align: center;
-    margin-top: 50px;
+  to {
+    transform: scaleY(1);
   }
-     
-  #guess-input {
-    display: block;
-    margin: 0 auto 20px;
-    padding: 10px;
-    font-size: 18px;
-    width: 250px;
-    border: 1px solid #ccc;
-  }
-     
-  #guess-button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #0CBABA;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-  }
-     
-  button:active {
-      transform: scale(0.95);
-  }
-     
-  .letter {
-      border: 1px solid black;
-      padding: 3px;
-      margin: 3px;
-      min-width: 20px;
-      text-align: center;
-      display: inline-block
-  }
-     
-  .row{
-      margin-bottom: 10px;
-  }
-     
-  .input-area{
-      margin: 30px;
-  }
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+#grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.input-area {
+  margin: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
+}
